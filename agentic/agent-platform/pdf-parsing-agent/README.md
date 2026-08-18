@@ -72,31 +72,23 @@ gemma-3-12b-it-mg-one-click-deploy
 This recipe deploys the `nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-FP8` Hugging Face checkpoint through Agent Platform Model Garden.
 
 1. Create a Hugging Face access token with permission to read the model checkpoint.
-2. Optional: confirm the checkpoints are searchable through Agent Platform Model Garden:
-
-   ```bash
-   gcloud ai model-garden models list \
-     --can-deploy-hugging-face-models \
-     --model-filter="Nemotron-Nano-12B-v2-VL"
-   ```
-
-3. In the Google Cloud console, open **Agent Platform > Model Garden**, then click **Deploy model**.
+2. In the Google Cloud console, open **Agent Platform > Model Garden**, then click **Deploy model**.
 
    ![Select Deploy model](images/step1_select_deploy_model.png)
 
-4. Under **Deploy model with default weights**, select **Agent Platform**.
+3. Under **Deploy model with default weights**, select **Agent Platform**.
 
    ![Select Agent Platform](images/step_2_select_agent_platform.png)
 
-5. In **Select model**, search for `nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-FP8`, then paste your Hugging Face access token.
+4. In **Select model**, search for `nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-FP8`, then paste your Hugging Face access token.
 
    ![Search for Nemotron model](images/step_3_search_for_fp8_model.png)
 
-6. Review the default deployment settings, then click **Edit settings**.
+5. Review the default deployment settings, then click **Edit settings**.
 
    ![Click Edit settings](images/step4_click_edit_settings.png)
 
-7. Set the deployment options:
+6. Set the deployment options:
    - **Region:** `us-central1`
    - **Endpoint name:** `nvidia-nemotron-nano-12b-v2-vl-fp8-mg-one-click-deploy`
    - **Machine spec:** `vLLM multi-modal 2k context (1 NVIDIA_L4; g2-standard-12)`
